@@ -53,3 +53,15 @@ function canvasDraw(coords)
 
 	pencil.stroke();
 }
+
+function eraserOn()
+{
+	pencil.strokeStyle = "white";
+	pencil.lineWidth = "5";
+}
+
+function pencilOn()
+{
+	pencil.strokeStyle = "black";
+	pencil.lineWidth = "1";
+}
