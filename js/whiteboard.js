@@ -1,9 +1,11 @@
 var canvas = document.getElementById("myCanvas");
+var color = document.getElementById("myColor").value;
 
 //2D drawing context
 var pencil = canvas.getContext("2d");
 
 pencil.lineWidth = "1";
+pencil.strokeStyle = color;
 
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
@@ -62,6 +64,12 @@ function eraserOn()
 
 function pencilOn()
 {
-	pencil.strokeStyle = "black";
+	pencil.strokeStyle = color;
 	pencil.lineWidth = "1";
+}
+
+function updateColor()
+{
+	color = document.getElementById("myColor").value;
+	pencil.strokeStyle = color;
 }
