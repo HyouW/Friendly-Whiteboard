@@ -73,3 +73,8 @@ function updateColor()
 	color = document.getElementById("myColor").value;
 	pencil.strokeStyle = color;
 }
+
+function clearCanvas()
+{
+	pencil.clearRect(0, 0, canvas.width, canvas.height);
+}
